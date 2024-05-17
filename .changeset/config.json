@@ -6,5 +6,5 @@
   "linked": [],
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["@tilli-pro/docs"]
+  "ignore": ["@tilli-pro/conf-docs"]
 }
