@@ -12,6 +12,7 @@ const config = {
   jsxSingleQuote: false,
 
   plugins: [
+    // TODO: figure out if the ianvs plugin version of this is truly better or not
     "@trivago/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
   ],
