@@ -4,7 +4,9 @@ import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 import eslintPluginTs from "typescript-eslint";
 
-/** @type {import("eslint").Linter.Config} */
+import prettierConfig from "./prettier.config.mjs";
+
+/** @type {import("typescript-eslint").Config} */
 export default [
   eslint.configs.recommended,
   ...eslintPluginTs.configs.recommended,
@@ -17,9 +19,9 @@ export default [
         JSX: true,
         ...globals.node,
       },
-      // parserOptions: {
-      //   project,
-      // },
+    },
+    rules: {
+      "prettier/prettier": ["warn", prettierConfig],
     },
     ignores: [
       // Ignore dotfiles
