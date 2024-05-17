@@ -1,20 +1,31 @@
 {
-  "name": "@acme/eslint-config",
+  "name": "@tilli-pro/eslint-config",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "files": [
-    "library.js",
-    "next.js",
-    "react-internal.js"
+    "library.mjs",
+    "next.mjs",
+    "react-internal.js",
+    "tsx-base.mjs",
+    "prettier.config.mjs"
   ],
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.1.4",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
-    "@vercel/style-guide": "^5.2.0",
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.2.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@next/eslint-plugin-next": "^14.2.3",
+    "@vercel/style-guide": "^6.0.0",
+    "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-turbo": "^1.12.4",
     "eslint-plugin-only-warn": "^1.1.0",
-    "typescript": "^5.3.3"
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-turbo": "^1.13.3",
+    "globals": "^15.2.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.9.0"
   }
 }

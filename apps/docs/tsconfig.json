@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules"],
-  "extends": "@acme/tsconfig/nextjs.json",
+  "extends": "@tilli-pro/ts-config/nextjs.json",
   "compilerOptions": {
     "outDir": "dist",
     "incremental": true,
@@ -10,5 +10,12 @@
       }
     ]
   },
-  "include": ["src", "next-env.d.ts", ".next/types/**/*.ts"]
+  "include": [
+    "src",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "eslint.config.mjs",
+    "next.config.js",
+    "prettier.config.mjs"
+  ]
 }
