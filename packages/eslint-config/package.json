@@ -1,6 +1,6 @@
 {
   "name": "@tilli-pro/eslint-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": false,
   "type": "module",
   "scripts": {
@@ -17,7 +17,7 @@
     "next.d.mts",
     "prettier.config.d.mts"
   ],
-  "devDependencies": {
+  "peerDependencies": {
     "@eslint/eslintrc": "^3.0.2",
     "@eslint/js": "^9.2.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
