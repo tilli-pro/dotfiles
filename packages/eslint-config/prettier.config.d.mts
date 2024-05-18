@@ -1,9 +1,7 @@
 export default config;
-export type BaseConfig = import("prettier").Config;
-export type ImportsConfig =
-  import("@ianvs/prettier-plugin-sort-imports").PrettierConfig;
-export type TailwindConfig =
-  import("prettier-plugin-tailwindcss").PluginOptions;
+export type BaseConfig = import('prettier').Config;
+export type ImportsConfig = import('@ianvs/prettier-plugin-sort-imports').PrettierConfig;
+export type TailwindConfig = import('prettier-plugin-tailwindcss').PluginOptions;
 /**
  * @typedef {import('prettier').Config} BaseConfig
  * @typedef {import('@ianvs/prettier-plugin-sort-imports').PrettierConfig} ImportsConfig

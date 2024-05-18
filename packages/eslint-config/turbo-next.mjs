@@ -23,6 +23,7 @@ export default [
   eslint.configs.recommended,
   ...eslintPluginTs.configs.recommended,
   ...compat.plugins("@next/eslint-plugin-next"),
+  ...compat.extends("eslint-config-turbo"),
   eslintPluginPrettier,
   eslintConfigPrettier,
   {
