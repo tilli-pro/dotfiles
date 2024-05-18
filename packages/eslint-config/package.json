@@ -1,17 +1,22 @@
 {
   "name": "@tilli-pro/eslint-config",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "private": false,
   "type": "module",
+  "scripts": {
+    "build": "tsc ./*.mts --allowJs --skipLibCheck --declaration --emitDeclarationOnly"
+  },
   "files": [
     "library.mjs",
     "next.mjs",
     "react-internal.js",
     "tsx-base.mjs",
     "prettier.config.mjs",
-    "types.d.ts"
+    "library.d.mts",
+    "tsx-base.d.mts",
+    "next.d.mts",
+    "prettier.config.d.mts"
   ],
-  "types": "types.d.ts",
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.2",
     "@eslint/js": "^9.2.0",
