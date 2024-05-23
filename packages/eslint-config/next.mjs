@@ -18,7 +18,7 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-/** @type {import("typescript-eslint").Config} */
+/** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
   eslint.configs.recommended,
   ...eslintPluginTs.configs.recommended,
