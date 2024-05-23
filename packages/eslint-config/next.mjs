@@ -38,6 +38,15 @@ export default [
     },
     rules: {
       "prettier/prettier": ["warn", prettierConfig],
+      "@typescript-eslint/ban-types": [
+        "warn",
+        {
+          extendDefaults: true,
+          types: {
+            "{}": false,
+          },
+        },
+      ],
     },
   },
 ];
