@@ -1,6 +1,6 @@
 {
   "name": "@tilli-pro/eslint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": false,
   "type": "module",
   "scripts": {
@@ -8,13 +8,16 @@
   },
   "files": [
     "library.mjs",
-    "next.mjs",
-    "react-internal.js",
-    "tsx-base.mjs",
-    "prettier.config.mjs",
     "library.d.mts",
-    "tsx-base.d.mts",
+    "next.mjs",
     "next.d.mts",
+    "react-internal.mjs",
+    "react-internal.d.mts",
+    "tsx-base.mjs",
+    "tsx-base.d.mts",
+    "turbo-next.mjs",
+    "turbo-next.d.mts",
+    "prettier.config.mjs",
     "prettier.config.d.mts"
   ],
   "dependencies": {
