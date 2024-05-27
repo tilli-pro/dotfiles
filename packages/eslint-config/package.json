@@ -4,7 +4,7 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "build": "rm -rf *.d.mts && tsc ./*.mjs --allowJs --skipLibCheck --declaration --emitDeclarationOnly"
+    "build": "rm -rf *.d.mts && tsc next.mjs react-internal.mjs tsx-base.mjs turbo-next.mjs library.mjs prettier.config.mjs --allowJs --skipLibCheck --declaration --emitDeclarationOnly"
   },
   "files": [
     "library.mjs",
@@ -18,23 +18,27 @@
     "prettier.config.d.mts"
   ],
   "dependencies": {
-    "@eslint/eslintrc": "^3.0.2",
-    "@eslint/js": "^9.2.0",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.3.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@next/eslint-plugin-next": "^14.2.3",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/eslint": "^8.56.10",
     "@vercel/style-guide": "^6.0.0",
-    "eslint": "^9.2.0",
+    "eslint": "^9.3.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-config-turbo": "^1.12.4",
+    "eslint-config-turbo": "^1.13.3",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-turbo": "^1.13.3",
-    "globals": "^15.2.0",
+    "globals": "^15.3.0",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "typescript": "^5.3.3",
-    "typescript-eslint": "^7.9.0"
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "typescript-eslint": "^7.10.0"
   }
 }

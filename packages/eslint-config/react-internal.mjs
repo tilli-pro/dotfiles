@@ -1,7 +1,4 @@
-
-import { FlatCompat } from "@eslint/eslintrc";
 import eslint from "@eslint/js";
-import nextPlugin from "@next/eslint-plugin-next";
 import eslintConfigPrettier from "eslint-config-prettier";
 import "eslint-plugin-only-warn";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
@@ -10,21 +7,12 @@ import hooksPlugin from "eslint-plugin-react-hooks";
 import globals from "globals";
 import path from "node:path";
 import eslintPluginTs from "typescript-eslint";
-import { fileURLToPath } from "url";
 
 import prettierConfig from "./prettier.config.mjs";
 
 const project = path.resolve(process.cwd(), "tsconfig.json");
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-
 /**
- * TODO: FIGURE OUT HOW TO DEAL WITH THIS
  * @type {any[]}
  */
 const ts = eslintPluginTs.configs.recommended;
@@ -45,18 +33,13 @@ export default [
     plugins: {
       react: reactPlugin,
       "react-hooks": hooksPlugin,
-      "@next/next": nextPlugin,
     },
     rules: {
       ...reactPlugin.configs["jsx-runtime"].rules,
       ...hooksPlugin.configs.recommended.rules,
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs["core-web-vitals"].rules,
-      "@next/next/no-img-element": "error",
     },
-    ignores: [".next/*", "node_modules", ".next"],
+    ignores: [".next/*", "node_modules"],
   },
-  ...compat.extends("eslint-config-turbo"),
   eslintPluginPrettier,
   prettier,
   {
@@ -82,6 +65,5 @@ export default [
         },
       ],
     },
-    ignores: [".next/*", "node_modules", ".next"],
   },
 ];

@@ -1,0 +1,121 @@
+diff --git a/dist/rules/no-duplicate-head.js b/dist/rules/no-duplicate-head.js
+index 720c79320d1fb1b17b0c9aabb2b39f7bf5ded7d1..dbe146c48619f791284b9941b424038c20b4fe20 100644
+--- a/dist/rules/no-duplicate-head.js
++++ b/dist/rules/no-duplicate-head.js
+@@ -16,7 +16,7 @@ module.exports = (0, _definerule.defineRule)({
+         return {
+             ImportDeclaration: function ImportDeclaration(node) {
+                 if (node.source.value === "next/document") {
+-                    var documentImport = node.specifiers.find(function(param) {
++                    var documentImport = node.specifiers.find(function (param) {
+                         var type = param.type;
+                         return type === "ImportDefaultSpecifier";
+                     });
+@@ -26,8 +26,9 @@ module.exports = (0, _definerule.defineRule)({
+                 }
+             },
+             ReturnStatement: function ReturnStatement(node) {
+-                var ancestors = context.getAncestors();
+-                var documentClass = ancestors.find(function(ancestorNode) {
++                var sourceCode = context.sourceCode ?? context.getSourceCode();
++                var ancestors = sourceCode.getAncestors(node);
++                var documentClass = ancestors.find(function (ancestorNode) {
+                     return ancestorNode.type === "ClassDeclaration" && ancestorNode.superClass && "name" in ancestorNode.superClass && ancestorNode.superClass.name === documentImportName;
+                 });
+                 if (!documentClass) {
+@@ -36,11 +37,11 @@ module.exports = (0, _definerule.defineRule)({
+                 // @ts-expect-error - `node.argument` could be a `JSXElement` which has property `children`
+                 if (node.argument && "children" in node.argument && node.argument.children) {
+                     // @ts-expect-error - `node.argument` could be a `JSXElement` which has property `children`
+-                    var headComponents = node.argument.children.filter(function(childrenNode) {
++                    var headComponents = node.argument.children.filter(function (childrenNode) {
+                         return childrenNode.openingElement && childrenNode.openingElement.name && childrenNode.openingElement.name.name === "Head";
+                     });
+                     if (headComponents.length > 1) {
+-                        for(var i = 1; i < headComponents.length; i++){
++                        for (var i = 1; i < headComponents.length; i++) {
+                             context.report({
+                                 node: headComponents[i],
+                                 message: "Do not include multiple instances of `<Head/>`. See: ".concat(url)
+diff --git a/dist/rules/no-page-custom-font.js b/dist/rules/no-page-custom-font.js
+index bbf155a4a5c23d93687492b5962c685a699365e0..155d4897c2b36bd92ea184046e3391dacbbdbc34 100644
+--- a/dist/rules/no-page-custom-font.js
++++ b/dist/rules/no-page-custom-font.js
+@@ -35,7 +35,7 @@ module.exports = (0, _definerule.defineRule)({
+         return {
+             ImportDeclaration: function ImportDeclaration(node) {
+                 if (node.source.value === "next/document") {
+-                    var documentImport = node.specifiers.find(function(param) {
++                    var documentImport = node.specifiers.find(function (param) {
+                         var type = param.type;
+                         return type === "ImportDefaultSpecifier";
+                     });
+@@ -58,17 +58,18 @@ module.exports = (0, _definerule.defineRule)({
+                 if (node.name.name !== "link") {
+                     return;
+                 }
+-                var ancestors = context.getAncestors();
++                var sourceCode = context.sourceCode ?? context.getSourceCode();
++                var ancestors = sourceCode.getAncestors(node);
+                 // if `export default <name>` is further down within the file after the
+                 // currently traversed component, then `localDefaultExportName` will
+                 // still be undefined
+                 if (!localDefaultExportId) {
+                     // find the top level of the module
+-                    var program = ancestors.find(function(ancestor) {
++                    var program = ancestors.find(function (ancestor) {
+                         return ancestor.type === "Program";
+                     });
+                     // go over each token to find the combination of `export default <name>`
+-                    for(var i = 0; i <= program.tokens.length - 1; i++){
++                    for (var i = 0; i <= program.tokens.length - 1; i++) {
+                         if (localDefaultExportId) {
+                             break;
+                         }
+@@ -86,7 +87,7 @@ module.exports = (0, _definerule.defineRule)({
+                         }
+                     }
+                 }
+-                var parentComponent = ancestors.find(function(ancestor) {
++                var parentComponent = ancestors.find(function (ancestor) {
+                     // export default class ... extends ...
+                     if (exportDeclarationType === "ClassDeclaration") {
+                         return ancestor.type === exportDeclarationType && "superClass" in ancestor && ancestor.superClass && "name" in ancestor.superClass && ancestor.superClass.name === documentImportName;
+diff --git a/dist/utils/get-root-dirs.js b/dist/utils/get-root-dirs.js
+index 0c051235c43d37e74cba8c6baa1cb7098adaf318..e073815ccc345d497687dbf7723afd1044b4bfa0 100644
+--- a/dist/utils/get-root-dirs.js
++++ b/dist/utils/get-root-dirs.js
+@@ -4,28 +4,28 @@ Object.defineProperty(exports, "__esModule", {
+ });
+ Object.defineProperty(exports, "getRootDirs", {
+     enumerable: true,
+-    get: function() {
++    get: function () {
+         return getRootDirs;
+     }
+ });
+ var _glob = require("glob");
+ /**
+  * Process a Next.js root directory glob.
+- */ var processRootDir = function(rootDir) {
++ */ var processRootDir = function (rootDir) {
+     // Ensures we only match folders.
+     if (!rootDir.endsWith("/")) rootDir += "/";
+     return (0, _glob.globSync)(rootDir);
+ };
+-var getRootDirs = function(context) {
++var getRootDirs = function (context) {
+     var rootDirs = [
+-        context.getCwd()
++        context.cwd ?? context.getCwd()
+     ];
+     var nextSettings = context.settings.next || {};
+     var rootDir = nextSettings.rootDir;
+     if (typeof rootDir === "string") {
+         rootDirs = processRootDir(rootDir);
+     } else if (Array.isArray(rootDir)) {
+-        rootDirs = rootDir.map(function(dir) {
++        rootDirs = rootDir.map(function (dir) {
+             return typeof dir === "string" ? processRootDir(dir) : [];
+         }).flat();
+     }
