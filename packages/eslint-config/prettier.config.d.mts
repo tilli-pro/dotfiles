@@ -1,3 +1,4 @@
+export function importOrder(order: string[]): import("eslint").Linter.FlatConfig;
 export default config;
 export type BaseConfig = import('prettier').Config;
 export type ImportsConfig = import('@ianvs/prettier-plugin-sort-imports').PrettierConfig;
