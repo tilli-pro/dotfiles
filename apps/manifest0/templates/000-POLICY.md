@@ -7,6 +7,9 @@
 <!-- Should be <=4 sentences! Keep it succint. -->
 
 ## Definitions
+|Name|Definition|
+| --:|:-- |
+|Term|term definition|
 <!-- List any specific definitions that are referred to in the below sections. Use table format preferrably. -->
 
 ## Ownership
