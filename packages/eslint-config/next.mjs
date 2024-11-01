@@ -6,7 +6,7 @@ import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import reactPlugin from "eslint-plugin-react";
 import hooksPlugin from "eslint-plugin-react-hooks";
 import globals from "globals";
-import path from "node:path";
+import path from "path";
 import eslintPluginTs from "typescript-eslint";
 
 import prettierConfig from "./prettier.config.mjs";

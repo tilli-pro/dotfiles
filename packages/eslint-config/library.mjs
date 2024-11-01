@@ -6,12 +6,22 @@ import eslintPluginTs from "typescript-eslint";
 
 import prettierConfig from "./prettier.config.mjs";
 
-/** @type {import("typescript-eslint").Config} */
+/**
+ * @type {import("eslint").Linter.FlatConfig}
+ */
+const prettier = eslintConfigPrettier;
+
+/**
+ * @type {import("eslint").Linter.FlatConfig & { [Symbol.iterator]: () => any }}
+ */
+const ts = eslintPluginTs.configs.recommended;
+
+/** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
   eslint.configs.recommended,
-  ...eslintPluginTs.configs.recommended,
+  ...ts,
   eslintPluginPrettier,
-  eslintConfigPrettier,
+  prettier,
   {
     languageOptions: {
       globals: {
