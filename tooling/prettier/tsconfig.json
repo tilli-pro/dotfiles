@@ -1,0 +1,5 @@
+{
+  "extends": "@tilli-pro/tsconfig/base.json",
+  "include": ["."],
+  "exclude": ["node_modules"]
+}
