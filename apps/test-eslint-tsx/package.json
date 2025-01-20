@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@tilli-pro/eslint-config": "workspace:*",
-    "@tilli-pro/ts-config": "workspace:*",
+    "@tilli-pro/tsconfig": "workspace:*",
     "@types/node": "^20.11.24",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

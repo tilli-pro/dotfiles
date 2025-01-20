@@ -17,7 +17,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@tilli-pro/eslint-config": "workspace:*",
-    "@tilli-pro/ts-config": "workspace:*",
+    "@tilli-pro/tsconfig": "workspace:*",
     "commitlint": "^19.3.0",
     "eslint": "^9.3.0",
     "husky": "^9.0.11",
