@@ -39,7 +39,7 @@ export const restrictEnvAccess = tseslint.config(
 
 export default tseslint.config(
   /** ignore files not tracked by VCS + any config files */
-  includeIgnoreFile(path.join(import.meta.dirname, "../../.gitignore")),
+  // includeIgnoreFile(path.join(import.meta.dirname, "../../.gitignore")),
   { ignores: ["**/*.config.*"] },
   {
     files: ["**/*.js", "**/*.ts", "**/*.tsx"],
