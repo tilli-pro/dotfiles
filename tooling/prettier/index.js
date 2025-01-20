@@ -10,10 +10,10 @@ const config = {
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
   ],
-  tailwindConfig: fileURLToPath(
-    new URL("../../tooling/tailwind/web.ts", import.meta.url),
-    // new URL("../../packages/old-tailwind-config/tailwind.config.ts", import.meta.url),
-  ),
+  // tailwindConfig: fileURLToPath(
+  //   new URL("../../tooling/tailwind/web.ts", import.meta.url),
+  //   // new URL("../../packages/old-tailwind-config/tailwind.config.ts", import.meta.url),
+  // ),
   tailwindFunctions: ["cn", "cva"],
   importOrder: [
     "<TYPES>",
@@ -22,7 +22,7 @@ const config = {
     "^(expo(.*)$)|^(expo$)",
     "<THIRD_PARTY_MODULES>",
     "",
-    "<TYPES>^@tilli",
+    "<TYPES>^@tilli-pro",
     "^@tilli-pro/(.*)$",
     "",
     "<TYPES>^#",
