@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@tilli-pro/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
     "typescript": "catalog:"
   },
   "prettier": "@tilli-pro/prettier-config"
