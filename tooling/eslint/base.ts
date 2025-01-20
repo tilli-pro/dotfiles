@@ -35,7 +35,7 @@ export const restrictEnvAccess = tseslint.config(
       ],
     },
   },
-);
+) as Awaited<import('typescript-eslint').Config>;
 
 export default tseslint.config(
   /** ignore files not tracked by VCS + any config files */
@@ -124,4 +124,4 @@ export default tseslint.config(
     linterOptions: { reportUnusedDisableDirectives: true },
     languageOptions: { parserOptions: { projectService: true } },
   },
-);
+) as Awaited<import('typescript-eslint').Config>;

@@ -19,4 +19,4 @@ export default [
       },
     },
   },
-];
+] as Awaited<import('typescript-eslint').Config>;

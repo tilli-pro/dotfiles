@@ -7,13 +7,14 @@
   },
   "type": "module",
   "exports": {
-    "./base": "./base.js",
-    "./react": "./react.js",
-    "./nextjs": "./nextjs.js",
-    "./storybook": "./storybook.js",
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    },
     "./types": "./types.d.ts"
   },
   "scripts": {
+    "build": "tsc",
     "clean": "git clean -xdf .cache .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "typecheck": "tsc --noEmit"

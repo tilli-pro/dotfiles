@@ -7,4 +7,4 @@ export default [
       storybook: storybookPlugin,
     },
   },
-];
+] as Awaited<import('typescript-eslint').Config>
