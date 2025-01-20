@@ -34,9 +34,6 @@
       "allowedVersions": {
         "eslint": "9"
       }
-    },
-    "patchedDependencies": {
-      "@next/eslint-plugin-next@14.2.3": "patches/@next__eslint-plugin-next@14.2.3.patch"
     }
   }
 }

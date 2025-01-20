@@ -1,21 +1,15 @@
 {
-  "exclude": ["node_modules"],
-  "extends": "@tilli-pro/ts-config/nextjs.json",
+  "extends": "@tilli-pro/tsconfig/base.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "lib": ["ES2022", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "plugins": [{ "name": "next" }],
+    "module": "esnext"
   },
-  "include": [
-    "src",
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "eslint.config.mjs",
-    "next.config.js",
-    "prettier.config.mjs"
-  ]
+  "include": [".", ".next/types/**/*.ts", "__tests__/*"],
+  "exclude": ["node_modules", "next-logger.config.cjs"]
 }
