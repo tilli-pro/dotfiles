@@ -22,10 +22,9 @@
     "eslint": "^9.3.0",
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
-    "turbo": "latest",
+    "turbo": "2.4.3",
     "typescript": "^5.4.5"
   },
-  "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18"
   },
@@ -38,5 +37,6 @@
     "patchedDependencies": {
       "@next/eslint-plugin-next@14.2.3": "patches/@next__eslint-plugin-next@14.2.3.patch"
     }
-  }
+  },
+  "packageManager": "pnpm@9.12.1"
 }

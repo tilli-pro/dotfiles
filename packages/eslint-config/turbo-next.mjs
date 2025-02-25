@@ -1,4 +1,3 @@
-
 import { FlatCompat } from "@eslint/eslintrc";
 import eslint from "@eslint/js";
 import nextPlugin from "@next/eslint-plugin-next";
@@ -9,8 +8,8 @@ import reactPlugin from "eslint-plugin-react";
 import hooksPlugin from "eslint-plugin-react-hooks";
 import globals from "globals";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import eslintPluginTs from "typescript-eslint";
-import { fileURLToPath } from "url";
 
 import prettierConfig from "./prettier.config.mjs";
 
@@ -21,7 +20,6 @@ const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
-
 
 /**
  * TODO: FIGURE OUT HOW TO DEAL WITH THIS

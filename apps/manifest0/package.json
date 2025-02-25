@@ -19,7 +19,7 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
-    "@tilli-pro/eslint-config": "^2.0.2",
+    "@tilli-pro/eslint-config": "workspace:*",
     "@tilli-pro/ts-config": "workspace:*",
     "@types/mdx": "^2.0.13",
     "@types/node": "^20.11.24",
