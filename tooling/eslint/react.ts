@@ -1,5 +1,6 @@
 import reactPlugin from "eslint-plugin-react";
 import hooksPlugin from "eslint-plugin-react-hooks";
+import sayariPlugin from "@sayari/eslint-plugin";
 
 /** @type {Awaited<import('typescript-eslint').Config>} */
 export default [
@@ -8,10 +9,12 @@ export default [
     plugins: {
       react: reactPlugin,
       "react-hooks": hooksPlugin,
+      sayari: sayariPlugin,
     },
     rules: {
       ...reactPlugin.configs["jsx-runtime"].rules,
       ...hooksPlugin.configs.recommended.rules,
+      ...sayariPlugin.configs.recommended.rules,
     },
     languageOptions: {
       globals: {
