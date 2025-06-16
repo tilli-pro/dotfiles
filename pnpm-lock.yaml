@@ -15,6 +15,9 @@ catalogs:
     '@next/eslint-plugin-next':
       specifier: 14.2.14
       version: 14.2.14
+    '@sayari/eslint-plugin':
+      specifier: 0.0.1-rc.4
+      version: 0.0.1-rc.4
     '@types/eslint-config-prettier':
       specifier: 6.11.3
       version: 6.11.3
@@ -240,6 +243,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 'catalog:'
         version: 14.2.14
+      '@sayari/eslint-plugin':
+        specifier: 'catalog:'
+        version: 0.0.1-rc.4(eslint@9.12.0(jiti@2.4.2))
       eslint-config-prettier:
         specifier: 'catalog:'
         version: 9.1.0(eslint@9.12.0(jiti@2.4.2))
@@ -1128,6 +1134,12 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@sayari/eslint-plugin@0.0.1-rc.4':
+    resolution: {integrity: sha512-epr+ovlyp+JPuPqUOW6S+aFcLIwnyBsBMr65yMi4qjQ9/8SlsAjVjt8Q8O9Al8fT1dk9MZlTomKI/UMr4bUT5A==}
+    engines: {node: '>=0.10.0'}
+    peerDependencies:
+      eslint: ^8.5.0
 
   '@storybook/csf@0.1.13':
     resolution: {integrity: sha512-7xOOwCLGB3ebM87eemep89MYRFTko+D8qE7EdAAq74lgdqRR5cOUtYWJLjO2dLtP94nqoOdHJo6MdLLKzg412Q==}
@@ -4118,6 +4130,10 @@ snapshots:
     optional: true
 
   '@rtsao/scc@1.1.0': {}
+
+  '@sayari/eslint-plugin@0.0.1-rc.4(eslint@9.12.0(jiti@2.4.2))':
+    dependencies:
+      eslint: 9.12.0(jiti@2.4.2)
 
   '@storybook/csf@0.1.13':
     dependencies:
