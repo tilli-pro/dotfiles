@@ -1,5 +1,11 @@
 # @tilli-pro/eslint-config
 
+## 0.4.1
+
+### Patch Changes
+
+- f3bd780: fix: typo in plugin name for "@sayari"
+
 ## 0.4.0
 
 ### Minor Changes
