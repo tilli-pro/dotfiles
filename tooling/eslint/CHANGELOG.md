@@ -1,5 +1,11 @@
 # @tilli-pro/eslint-config
 
+## 0.5.1
+
+### Patch Changes
+
+- 44f5927: fix: .gitignore path resolution + esmodule plugin import
+
 ## 0.5.0
 
 ### Minor Changes
