@@ -1,5 +1,11 @@
 # @tilli-pro/eslint-config
 
+## 0.6.1
+
+### Patch Changes
+
+- e5827c0: chore(eslint): disable sayari plugin due to false positives
+
 ## 0.6.0
 
 ### Minor Changes
