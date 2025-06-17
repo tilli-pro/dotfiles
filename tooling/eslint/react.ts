@@ -1,6 +1,6 @@
 import reactPlugin from "eslint-plugin-react";
 import hooksPlugin from "eslint-plugin-react-hooks";
-import tilliProPlugin from "./plugin";
+import tilliProPlugin from "./plugin/index.js";
 // import sayariPlugin from "@sayari/eslint-plugin";
 
 /** @type {Awaited<import('typescript-eslint').Config>} */

@@ -3,7 +3,7 @@
  * @author Tilli Software
  */
 
-import noConditionalLiteralsInJsx from "./rules/no-conditional-literals-in-jsx";
+import noConditionalLiteralsInJsx from "./rules/no-conditional-literals-in-jsx.js";
 
 //------------------------------------------------------------------------------
 // Requirements

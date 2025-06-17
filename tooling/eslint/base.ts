@@ -1,5 +1,6 @@
 /// <reference types="./types.d.ts" />
 
+import * as fs from "node:fs";
 import * as path from "node:path";
 import { includeIgnoreFile } from "@eslint/compat";
 import eslint from "@eslint/js";
@@ -35,11 +36,23 @@ export const restrictEnvAccess = tseslint.config(
       ],
     },
   },
-) as Awaited<import('typescript-eslint').Config>;
+) as Awaited<import("typescript-eslint").Config>;
 
 export default tseslint.config(
   /** ignore files not tracked by VCS + any config files */
-  includeIgnoreFile(path.join(import.meta.dirname, "../../../../.gitignore")),
+  (() => {
+    const dirs = [".", "..", "../..", "../../..", "../../../.."];
+    for (const dir of dirs) {
+      try {
+        const gitignorePath = path.join(import.meta.dirname, dir, ".gitignore");
+        if (fs.existsSync(gitignorePath))
+          return includeIgnoreFile(gitignorePath);
+      } catch {
+        continue;
+      }
+    }
+    return {};
+  })(),
   { ignores: ["**/*.config.*"] },
   {
     files: ["**/*.js", "**/*.ts", "**/*.tsx"],
@@ -124,4 +137,4 @@ export default tseslint.config(
     linterOptions: { reportUnusedDisableDirectives: true },
     languageOptions: { parserOptions: { projectService: true } },
   },
-) as Awaited<import('typescript-eslint').Config>;
+) as Awaited<import("typescript-eslint").Config>;
