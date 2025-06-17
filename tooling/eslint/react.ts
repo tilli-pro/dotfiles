@@ -1,6 +1,6 @@
 import reactPlugin from "eslint-plugin-react";
 import hooksPlugin from "eslint-plugin-react-hooks";
-import sayariPlugin from "@sayari/eslint-plugin";
+// import sayariPlugin from "@sayari/eslint-plugin";
 import tilliProPlugin from "./plugin/index.js";
 import googleTranslatePlugin from "eslint-plugin-react-google-translate";
 
@@ -11,14 +11,14 @@ export default [
     plugins: {
       react: reactPlugin,
       "react-hooks": hooksPlugin,
-      "@sayari": sayariPlugin,
+      // "@sayari": sayariPlugin,
       "@tilli-pro": tilliProPlugin,
       "react-google-translate": googleTranslatePlugin,
     },
     rules: {
       ...reactPlugin.configs["jsx-runtime"].rules,
       ...hooksPlugin.configs.recommended.rules,
-      ...sayariPlugin.configs.recommended.rules,
+      // ...sayariPlugin.configs.recommended.rules,
       ...tilliProPlugin.configs.recommended.rules,
       /** react-google-translate */
       ...{
