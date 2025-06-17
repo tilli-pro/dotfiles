@@ -1,5 +1,11 @@
 # @tilli-pro/eslint-config
 
+## 0.6.0
+
+### Minor Changes
+
+- 07d9a17: feat(eslint): add react-google-translate rule
+
 ## 0.5.2
 
 ### Patch Changes
