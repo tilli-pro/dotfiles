@@ -83,3 +83,9 @@ declare module "@sayari/eslint-plugin" {
   };
   export const rules: Record<string, Rule.RuleModule>;
 }
+
+declare module "eslint-plugin-react-google-translate" {
+  import type { Rule } from "eslint";
+
+  export const rules: Record<string, Rule.RuleModule>;
+}
