@@ -1,5 +1,11 @@
 # @tilli-pro/eslint-config
 
+## 0.5.2
+
+### Patch Changes
+
+- dec40b2: chore: enable sayari eslint plugin for detecting loose text
+
 ## 0.5.1
 
 ### Patch Changes
