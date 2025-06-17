@@ -9,7 +9,7 @@ export default [
     plugins: {
       react: reactPlugin,
       "react-hooks": hooksPlugin,
-      sayari: sayariPlugin,
+      "@sayari": sayariPlugin,
     },
     rules: {
       ...reactPlugin.configs["jsx-runtime"].rules,
