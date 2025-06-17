@@ -1,5 +1,11 @@
 # @tilli-pro/eslint-config
 
+## 0.5.0
+
+### Minor Changes
+
+- 332e7f5: feat: custom tilli pro eslint plugin
+
 ## 0.4.1
 
 ### Patch Changes
