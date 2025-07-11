@@ -1,5 +1,11 @@
 # @tilli-pro/eslint-config
 
+## 0.6.2
+
+### Patch Changes
+
+- 1b144c0: chore(deps): bump eslint/prettier config version
+
 ## 0.6.1
 
 ### Patch Changes
