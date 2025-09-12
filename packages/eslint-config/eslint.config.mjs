@@ -1,3 +1,3 @@
-import d from "./tsx-base.mjs";
+import d from "./react-internal.mjs";
 
 export default d;
