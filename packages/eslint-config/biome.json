@@ -104,7 +104,7 @@
       "attributePosition": "auto",
       "bracketSpacing": true
     },
-    "globals": []
+    "globals": ["exports", "React", "JSX"]
   },
   "html": { "formatter": { "selfCloseVoidElements": "always" } },
   "overrides": [
@@ -149,6 +149,36 @@
       ],
       "javascript": { "globals": ["exports", "React", "JSX"] },
       "linter": { "rules": {} }
+    },
+    {
+      "includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+      "linter": {
+        "rules": {
+          "complexity": { "noArguments": "error" },
+          "correctness": {
+            "noConstAssign": "off",
+            "noGlobalObjectCalls": "off",
+            "noInvalidBuiltinInstantiation": "off",
+            "noInvalidConstructorSuper": "off",
+            "noSetterReturn": "off",
+            "noUndeclaredVariables": "off",
+            "noUnreachable": "off",
+            "noUnreachableSuper": "off"
+          },
+          "style": { "useConst": "error" },
+          "suspicious": {
+            "noDuplicateClassMembers": "off",
+            "noDuplicateObjectKeys": "off",
+            "noDuplicateParameters": "off",
+            "noFunctionAssign": "off",
+            "noImportAssign": "off",
+            "noRedeclare": "off",
+            "noUnsafeNegation": "off",
+            "noVar": "error",
+            "useGetterReturn": "off"
+          }
+        }
+      }
     }
   ],
   "assist": {
