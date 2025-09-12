@@ -1,3 +1,3 @@
-import d from "./next.mjs";
+import d from "./turbo-next.mjs";
 
 export default d;
