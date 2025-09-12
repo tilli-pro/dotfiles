@@ -44,6 +44,7 @@
     "typescript-eslint": "^7.10.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.1.0",
     "@types/node": "^20.11.24"
   }
 }
