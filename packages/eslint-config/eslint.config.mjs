@@ -1,3 +1,3 @@
-import d from "./react-internal.mjs";
+import d from "./next.mjs";
 
 export default d;
