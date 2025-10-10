@@ -1,0 +1,11 @@
+{
+	"name": "@tilli-pro/biome",
+	"version": "0.1.0",
+	"private": true,
+	"exports": {
+		"default": "./biome.json"
+	},
+	"peerDependencies": {
+		"@biomejs/biome": "latest"
+	}
+}
