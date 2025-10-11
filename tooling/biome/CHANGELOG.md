@@ -1,5 +1,11 @@
 # @tilli-pro/biome
 
+## 0.6.0
+
+### Minor Changes
+
+- ba0f43b: turn off noUnresolvedImports
+
 ## 0.5.0
 
 ### Minor Changes
