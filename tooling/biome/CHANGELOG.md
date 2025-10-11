@@ -1,5 +1,11 @@
 # @tilli-pro/biome
 
+## 0.3.0
+
+### Minor Changes
+
+- 70733b8: biome maxSize limit fixed to 16MB
+
 ## 0.2.0
 
 ### Minor Changes
