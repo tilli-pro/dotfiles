@@ -3,7 +3,9 @@ import nextjsConfig from "@tilli-pro/eslint-config/nextjs";
 import reactConfig from "@tilli-pro/eslint-config/react";
 import storybookConfig from "@tilli-pro/eslint-config/storybook";
 
-/** @type {import('typescript-eslint').Config} */
+/**
+ * @type {import("eslint").Linter.FlatConfig[]}
+ */
 export default [
   {
     ignores: [".next/**"],

@@ -41,19 +41,20 @@ const config = {
 // TODO: create some default import order configs
 
 /**
- * 
- * @param {string[]} order 
+ *
+ * @param {string[]} order
  * @returns {import("eslint").Linter.FlatConfig}
  */
 export const importOrder = (order) => ({
   rules: {
-    "prettier/prettier": ["warn", {
-      ...config,
-      importOrder: [
-        ...order
-      ]
-    }],
-  }
-})
+    "prettier/prettier": [
+      "warn",
+      {
+        ...config,
+        importOrder: [...order],
+      },
+    ],
+  },
+});
 
 export default config;

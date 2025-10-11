@@ -1,0 +1,24 @@
+{
+  "extends": "@tilli-pro/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "checkJs": true,
+    "incremental": true,
+    /* Bundled libs */
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "ES2022"
+    ],
+    /* Path Aliases */
+    "baseUrl": "./src",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src/**/*",
+    ".next/types/**/*.ts"
+  ]
+}
