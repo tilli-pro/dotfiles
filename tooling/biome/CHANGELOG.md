@@ -1,5 +1,11 @@
 # @tilli-pro/biome
 
+## 0.5.0
+
+### Minor Changes
+
+- 3903b2f: fix semicolon rule
+
 ## 0.4.0
 
 ### Minor Changes
