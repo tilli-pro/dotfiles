@@ -1,5 +1,11 @@
 # @tilli-pro/biome
 
+## 0.4.0
+
+### Minor Changes
+
+- faa589b: turn off sorted keys rule
+
 ## 0.3.0
 
 ### Minor Changes
