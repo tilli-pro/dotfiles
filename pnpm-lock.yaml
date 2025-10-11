@@ -250,7 +250,7 @@ importers:
         specifier: ^5.2.11
         version: 5.2.11(@types/node@20.12.12)
 
-  packages/biome:
+  tooling/biome:
     dependencies:
       '@biomejs/biome':
         specifier: latest
@@ -5567,7 +5567,7 @@ snapshots:
 
   '@types/eslint@8.56.10':
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.8
       '@types/json-schema': 7.0.15
     optional: true
 
