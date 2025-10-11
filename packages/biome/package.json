@@ -2,6 +2,9 @@
 	"name": "@tilli-pro/biome",
 	"version": "0.1.0",
 	"private": true,
+	"files": [
+		"biome.json"
+	],
 	"exports": {
 		"default": "./biome.json"
 	},
