@@ -203,7 +203,7 @@
 				"noShadow": "warn",
 				"noMisusedPromises": "warn",
 				"noUnnecessaryConditions": "warn",
-				"noUnresolvedImports": "warn",
+				"noUnresolvedImports": "off",
 				"useAnchorHref": "warn",
 				"useImageSize": "warn",
 				"noUselessCatchBinding": "warn",
