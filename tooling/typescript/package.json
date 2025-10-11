@@ -1,0 +1,11 @@
+{
+  "name": "@tilli-pro/tsconfig",
+  "version": "0.1.2",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.json"
+  ]
+}

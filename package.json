@@ -1,42 +1,39 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "clean": "turbo clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "turbo build --filter=docs^... && changeset publish",
-    "prepare": "husky",
-    "commitlint": "commitlint --edit"
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.27.3",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@tilli-pro/eslint-config": "workspace:*",
-    "@tilli-pro/ts-config": "workspace:*",
-    "commitlint": "^19.3.0",
-    "eslint": "^9.3.0",
-    "husky": "^9.0.11",
-    "prettier": "^3.2.5",
-    "turbo": "2.4.3",
-    "typescript": "^5.4.5"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "eslint": "9"
-      }
-    },
-    "patchedDependencies": {
-      "@next/eslint-plugin-next@14.2.3": "patches/@next__eslint-plugin-next@14.2.3.patch"
-    }
-  },
-  "packageManager": "pnpm@9.12.1"
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"lint": "turbo lint",
+		"clean": "turbo clean && rm -rf node_modules",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"changeset": "changeset",
+		"version-packages": "changeset version",
+		"release": "turbo build && changeset publish",
+		"prepare": "husky",
+		"commitlint": "commitlint --edit"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.27.3",
+		"@commitlint/cli": "^19.3.0",
+		"@commitlint/config-conventional": "^19.2.2",
+		"@tilli-pro/eslint-config": "workspace:*",
+		"@tilli-pro/tsconfig": "workspace:*",
+		"commitlint": "^19.3.0",
+		"eslint": "^9.3.0",
+		"husky": "^9.0.11",
+		"prettier": "^3.2.5",
+		"turbo": "2.4.3",
+		"typescript": "^5.4.5"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"pnpm": {
+		"peerDependencyRules": {
+			"allowedVersions": {
+				"eslint": "9"
+			}
+		}
+	},
+	"packageManager": "pnpm@9.12.1"
 }

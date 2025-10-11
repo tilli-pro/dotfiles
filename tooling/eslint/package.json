@@ -1,0 +1,47 @@
+{
+  "name": "@tilli-pro/eslint-config",
+  "version": "0.6.2",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    },
+    "./types": "./types.d.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@eslint/compat": "catalog:",
+    "@next/eslint-plugin-next": "catalog:",
+    "@sayari/eslint-plugin": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "eslint-plugin-jsx-a11y": "catalog:",
+    "eslint-plugin-prettier": "catalog:",
+    "eslint-plugin-react": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-google-translate": "catalog:",
+    "eslint-plugin-storybook": "catalog:",
+    "eslint-plugin-turbo": "catalog:",
+    "typescript-eslint": "catalog:"
+  },
+  "devDependencies": {
+    "@tilli-pro/prettier-config": "workspace:*",
+    "@tilli-pro/tsconfig": "workspace:*",
+    "@types/eslint-config-prettier": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@tilli-pro/prettier-config"
+}

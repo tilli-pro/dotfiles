@@ -1,5 +1,5 @@
 {
-  "extends": "@tilli-pro/ts-config/nextjs.json",
+  "extends": "@tilli-pro/tsconfig/nextjs.json",
   "compilerOptions": {
     "checkJs": true,
     "incremental": true,
