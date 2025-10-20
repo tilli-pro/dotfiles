@@ -5,7 +5,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "*.json"
-  ]
+  "files": ["*.json"]
 }
