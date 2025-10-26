@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.0/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -28,11 +28,9 @@
       "recommended": false,
       "complexity": {
         "noVoid": "off",
-
         "noBannedTypes": "warn",
         "noUselessContinue": "warn",
         "noUselessTernary": "warn",
-
         "noAdjacentSpacesInRegex": "error",
         "noArguments": "error",
         "noExtraBooleanCast": "error",
@@ -75,7 +73,9 @@
         "noSwitchDeclarations": "error",
         "noUndeclaredVariables": {
           "level": "error",
-          "options": { "checkTypes": true }
+          "options": {
+            "checkTypes": true
+          }
         },
         "noUnreachable": "error",
         "noUnreachableSuper": "error",
@@ -90,7 +90,9 @@
         "noConstructorReturn": "error",
         "noInvalidGridAreas": "warn",
         "noInvalidUseBeforeDeclaration": "error",
-        "noVoidTypeReturn": "error"
+        "noVoidTypeReturn": "error",
+        "useImageSize": "warn",
+        "noChildrenProp": "error"
       },
       "style": {
         "noImplicitBoolean": "warn",
@@ -126,7 +128,8 @@
         "noNonNullAssertion": "warn",
         "useThrowOnlyError": "warn",
         "noSubstr": "warn",
-        "useDefaultSwitchClause": "warn"
+        "useDefaultSwitchClause": "warn",
+        "useReactFunctionComponents": "warn"
       },
       "suspicious": {
         "noArrayIndexKey": "warn",
@@ -177,6 +180,7 @@
         "noRedundantAlt": "error",
         "noStaticElementInteractions": "error",
         "useAltText": "error",
+        "useValidAnchor": "warn",
         "useValidLang": "error"
       },
       "performance": {
@@ -189,7 +193,8 @@
         "noBlankTarget": "error",
         "noDangerouslySetInnerHtmlWithChildren": "error",
         "noGlobalEval": "error",
-        "noDangerouslySetInnerHtml": "warn"
+        "noDangerouslySetInnerHtml": "warn",
+        "noSecrets": "warn"
       },
       "nursery": {
         "noFloatingPromises": "warn",
@@ -199,15 +204,11 @@
         "noImportCycles": "error",
         "noDeprecatedImports": "warn",
         "noNextAsyncClientComponent": "error",
-        "noSecrets": "warn",
         "noShadow": "warn",
         "noMisusedPromises": "warn",
         "noUnnecessaryConditions": "warn",
         "noUnresolvedImports": "off",
-        "useAnchorHref": "warn",
-        "useImageSize": "warn",
-        "noUselessCatchBinding": "warn",
-        "useReactFunctionComponents": "warn"
+        "noUselessCatchBinding": "warn"
       }
     }
   },
@@ -274,7 +275,8 @@
       "enabled": true
     },
     "parser": {
-      "cssModules": true
+      "cssModules": true,
+      "tailwindDirectives": true
     },
     "globals": []
   },
@@ -319,7 +321,9 @@
               ["@tilli-pro/**", "@tilli-internal/**"],
               ":PACKAGE:",
               ":ALIAS:",
-              { "type": false },
+              {
+                "type": false
+              },
               ":PATH:",
               ["**/*.css"]
             ]

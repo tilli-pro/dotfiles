@@ -5,7 +5,7 @@
   "exports": {
     "default": "./config.json"
   },
-  "peerDependencies": {
-    "@biomejs/biome": "2.2.6"
+  "dependencies": {
+    "@biomejs/biome": "2.3.0"
   }
 }
