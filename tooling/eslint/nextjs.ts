@@ -14,4 +14,4 @@ export default [
       "@next/next/no-duplicate-head": "off",
     },
   },
-] as Awaited<import('typescript-eslint').Config>
+] as Awaited<import("typescript-eslint").Config>;

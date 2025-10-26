@@ -23,13 +23,11 @@ export const setDeceleratingTimeout = (
   factor: number,
   times: number,
 ): NodeJS.Timeout => {
-  const internalCallback = (function (tick, counter) {
-    return function () {
-      if (--tick >= 0) {
-        setTimeout(internalCallback, ++counter * factor);
-        callback();
-      }
-    };
+  const internalCallback = ((tick, counter) => () => {
+    if (--tick >= 0) {
+      setTimeout(internalCallback, ++counter * factor);
+      callback();
+    }
   })(times, 0);
 
   return setTimeout(internalCallback, factor);

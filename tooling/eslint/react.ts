@@ -1,8 +1,8 @@
 import reactPlugin from "eslint-plugin-react";
+import googleTranslatePlugin from "eslint-plugin-react-google-translate";
 import hooksPlugin from "eslint-plugin-react-hooks";
 // import sayariPlugin from "@sayari/eslint-plugin";
 import tilliProPlugin from "./plugin/index.js";
-import googleTranslatePlugin from "eslint-plugin-react-google-translate";
 
 /** @type {Awaited<import('typescript-eslint').Config>} */
 export default [

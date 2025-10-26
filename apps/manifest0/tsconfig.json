@@ -4,11 +4,7 @@
     "checkJs": true,
     "incremental": true,
     /* Bundled libs */
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "ES2022"
-    ],
+    "lib": ["dom", "dom.iterable", "ES2022"],
     /* Path Aliases */
     "baseUrl": "./src",
     "plugins": [
@@ -18,8 +14,5 @@
     ],
     "jsx": "preserve"
   },
-  "include": [
-    "src/**/*",
-    ".next/types/**/*.ts"
-  ]
+  "include": ["src/**/*", ".next/types/**/*.ts"]
 }

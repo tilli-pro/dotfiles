@@ -47,9 +47,7 @@ export default tseslint.config(
         const gitignorePath = path.join(import.meta.dirname, dir, ".gitignore");
         if (fs.existsSync(gitignorePath))
           return includeIgnoreFile(gitignorePath);
-      } catch {
-        continue;
-      }
+      } catch {}
     }
     return {};
   })(),
