@@ -1,5 +1,11 @@
 # @tilli-pro/biome
 
+## 0.7.0
+
+### Minor Changes
+
+- 3e11a40: updated config for biome 2.3.0
+
 ## 0.6.0
 
 ### Minor Changes
