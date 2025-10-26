@@ -4,11 +4,13 @@ const nextConfig = {
   pageExtensions: ["tsx", "md", "mdx"],
   turbopack: {},
   experimental: {
-    allowDevelopmentBuild: true,
     preloadEntriesOnStart: true,
     appNavFailHandling: true,
     authInterrupts: true,
     browserDebugInfoInTerminal: {},
+    ...(process.env.NODE_ENV === "development"
+      ? { allowDevelopmentBuild: true }
+      : {}),
   },
   allowedDevOrigins: [],
   compiler: {
