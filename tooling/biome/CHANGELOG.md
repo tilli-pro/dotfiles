@@ -1,5 +1,11 @@
 # @tilli-pro/biome
 
+## 0.8.0
+
+### Minor Changes
+
+- 4531ba8: update to biome 2.3.0
+
 ## 0.7.0
 
 ### Minor Changes

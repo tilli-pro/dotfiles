@@ -1,6 +1,6 @@
 {
   "name": "@tilli-pro/biome",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "files": [
     "config.json"
   ],
