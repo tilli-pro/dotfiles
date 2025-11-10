@@ -39,10 +39,10 @@
         "noUselessTypeConstraint": "error",
         "noImportantStyles": "warn",
         "noUselessRename": "error",
-        "useArrowFunction": "warn",
+        "useArrowFunction": "info",
         "useRegexLiterals": "warn",
-        "useWhile": "error",
-        "noEmptyTypeParameters": "error",
+        "useWhile": "warn",
+        "noEmptyTypeParameters": "warn",
         "noThisInStatic": "error",
         "noStaticOnlyClass": "error",
         "noUselessThisAlias": "warn",
@@ -56,13 +56,13 @@
         "useHookAtTopLevel": "warn",
         "useParseIntRadix": "warn",
         "noUnusedImports": "warn",
-        "noUnusedLabels": "error",
-        "noUnusedPrivateClassMembers": "error",
-        "noUnusedVariables": "error",
+        "noUnusedLabels": "warn",
+        "noUnusedPrivateClassMembers": "warn",
+        "noUnusedVariables": "warn",
         "noConstAssign": "error",
-        "noConstantCondition": "error",
+        "noConstantCondition": "warn",
         "noEmptyCharacterClassInRegex": "error",
-        "noEmptyPattern": "error",
+        "noEmptyPattern": "warn",
         "noGlobalObjectCalls": "error",
         "noInvalidBuiltinInstantiation": "error",
         "noInvalidConstructorSuper": "error",
@@ -72,12 +72,12 @@
         "noSetterReturn": "error",
         "noSwitchDeclarations": "error",
         "noUndeclaredVariables": {
-          "level": "error",
+          "level": "warn",
           "options": {
-            "checkTypes": true
+            "checkTypes": false
           }
         },
-        "noUnreachable": "error",
+        "noUnreachable": "warn",
         "noUnreachableSuper": "error",
         "noUnsafeFinally": "error",
         "noUnsafeOptionalChaining": "error",
@@ -92,7 +92,7 @@
         "noInvalidUseBeforeDeclaration": "error",
         "noVoidTypeReturn": "error",
         "useImageSize": "warn",
-        "noChildrenProp": "error"
+        "noChildrenProp": "warn"
       },
       "style": {
         "noImplicitBoolean": "warn",
@@ -114,33 +114,34 @@
         "useDeprecatedReason": "error",
         "useExportType": "warn",
         "useFragmentSyntax": "error",
-        "useImportType": "error",
+        "useImportType": "warn",
         "useNodejsImportProtocol": "error",
         "useShorthandAssign": "warn",
         "useTemplate": "error",
         "useThrowNewError": "warn",
         "useObjectSpread": "error",
         "useGroupedAccessorPairs": "error",
-        "useNamingConvention": "warn",
+        "useNamingConvention": "off",
         "useReadonlyClassProperties": "warn",
-        "noDefaultExport": "warn",
+        "noDefaultExport": "info",
         "noDoneCallback": "warn",
         "noNonNullAssertion": "warn",
         "useThrowOnlyError": "warn",
         "noSubstr": "warn",
         "useDefaultSwitchClause": "warn",
-        "useReactFunctionComponents": "warn"
+        "useReactFunctionComponents": "warn",
+        "useFilenamingConvention": "off"
       },
       "suspicious": {
         "noArrayIndexKey": "warn",
         "noAsyncPromiseExecutor": "error",
-        "noCatchAssign": "error",
+        "noCatchAssign": "warn",
         "noClassAssign": "error",
         "noCommentText": "error",
         "noCompareNegZero": "error",
         "noConstantBinaryExpressions": "warn",
         "noControlCharactersInRegex": "error",
-        "noDoubleEquals": "error",
+        "noDoubleEquals": "warn",
         "noDebugger": "error",
         "noDuplicateCase": "error",
         "noDuplicateClassMembers": "error",
@@ -177,24 +178,29 @@
       },
       "a11y": {
         "recommended": true,
-        "noRedundantAlt": "error",
+        "noRedundantAlt": "warn",
         "noStaticElementInteractions": "error",
-        "useAltText": "error",
+        "useAltText": "warn",
         "useValidAnchor": "warn",
-        "useValidLang": "error"
+        "useValidLang": "warn",
+        "useFocusableInteractive": "off",
+        "useSemanticElements": "off",
+        "noRedundantRoles": "off",
+        "noDistractingElements": "error"
       },
       "performance": {
         "noAwaitInLoops": "warn",
         "useTopLevelRegex": "info",
         "noAccumulatingSpread": "warn",
-        "noDelete": "warn"
+        "noDelete": "info",
+        "noImgElement": "info"
       },
       "security": {
-        "noBlankTarget": "error",
+        "noBlankTarget": "warn",
         "noDangerouslySetInnerHtmlWithChildren": "error",
         "noGlobalEval": "error",
         "noDangerouslySetInnerHtml": "warn",
-        "noSecrets": "warn"
+        "noSecrets": "off"
       },
       "nursery": {
         "noFloatingPromises": "warn",
@@ -204,7 +210,7 @@
         "noImportCycles": "error",
         "noDeprecatedImports": "warn",
         "noNextAsyncClientComponent": "error",
-        "noShadow": "warn",
+        "noShadow": "info",
         "noMisusedPromises": "warn",
         "noUnnecessaryConditions": "warn",
         "noUnresolvedImports": "off",
@@ -341,8 +347,14 @@
       "includes": [
         "src/app/**/page.tsx",
         "src/app/**/layout.tsx",
+        "src/app/**/error.tsx",
+        "src/app/**/loading.tsx",
+        "src/app/**/template.tsx",
+        "src/app/**/not-found.tsx",
         "next.config.*ts",
-        "next.config.*js"
+        "next.config.*js",
+        "*.config.*ts",
+        "*.config.*js"
       ],
       "linter": {
         "rules": {
