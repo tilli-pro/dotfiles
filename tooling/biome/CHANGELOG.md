@@ -1,5 +1,11 @@
 # @tilli-pro/biome
 
+## 0.9.0
+
+### Minor Changes
+
+- 43e3541: default biome configuration change
+
 ## 0.8.0
 
 ### Minor Changes
